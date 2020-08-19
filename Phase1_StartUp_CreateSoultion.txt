@@ -1,0 +1,16 @@
+Create solution:
+1.	add project X.Common
+	class library (.Net core)
+2.  add project X.GeteWay.ApiApp
+	add => new project => Asp.Net Core Web Application => API
+	uncheck:	Configure for https
+	uncheck:	Enable Docket
+	No authentication
+3.  add prject X.MS.Activities
+4.  add project X.MS.Identity
+5.  add references
+5.1 X.GeteWay.ApiApp	references X.Common
+5.2 X.MS.Activities		references X.Common
+5.3 X.MS.Identity		references X.Common
+
+

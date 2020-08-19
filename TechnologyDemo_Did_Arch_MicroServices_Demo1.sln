@@ -3,7 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.GateWay.ApiApp", "X.GateWay.ApiApp\X.GateWay.ApiApp.csproj", "{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.Activities.Api.App", "X.MS.Activities.Api.App\X.MS.Activities.Api.App.csproj", "{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.Identity.ApiApp", "X.MS.Identity.ApiApp\X.MS.Identity.ApiApp.csproj", "{5054BE12-9A23-4E2E-80F2-67311DE4B382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Common", "X.Common\X.Common.csproj", "{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
+	ProjectSection(SolutionItems) = preProject
+		Phase1_StartUp_CreateSoultion.txt = Phase1_StartUp_CreateSoultion.txt
+		Phase2_MessageBus_SetupMessageBus.txt = Phase2_MessageBus_SetupMessageBus.txt
+		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
+		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
+		Phase9.txt = Phase9.txt
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5054BE12-9A23-4E2E-80F2-67311DE4B382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5054BE12-9A23-4E2E-80F2-67311DE4B382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5054BE12-9A23-4E2E-80F2-67311DE4B382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5054BE12-9A23-4E2E-80F2-67311DE4B382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

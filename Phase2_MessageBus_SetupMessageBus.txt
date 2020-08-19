@@ -1,0 +1,57 @@
+goal:	use rabbit MQ to Subscribe to messages and Publish messages on the service bus
+
+0.  background 
+	messaging is a way of echanging data between proceeses, application, servers. this decoules sender an reciever.
+
+	message bus \ messge queue is a service.
+	publisher can send a message to the bus. eg: commands (from GW to service), events (from service to GW or from service to other service)
+	subscriber can subscribe to some message (type)
+	serveral subscribers can subscribe to the same message
+
+	RabbitMQ				https://www.rabbitmq.com/ most popular, relaiable 
+							read:	https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html
+									https://www.cloudamqp.com/docs/monitoring.html	
+									https://www.rabbitmq.com/tutorials/amqp-concepts.html
+									https://www.cloudamqp.com/docs/index.html
+									https://www.cloudamqp.com/blog/2015-09-03-part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html	
+								
+
+	Azure service bus		https://azure.microsoft.com/en-us/services/service-bus/?&ef_id=CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&OCID=AID2100061_SEM_CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&dclid=CLXQ4Pqdp-sCFbPFuwgdhGQBrQ
+	zero mq					https://www.rabbitmq.com/
+	
+	we will use RabitMQ	=> download and installation
+
+
+
+1. configure Rabbit MQ service Bus
+
+	option1:	chosen
+				run rabbit mq on cloud - chsen
+				A.see plan:	https://www.cloudamqp.com/	==> pricing => you will see they have plan for free 
+				B.sign up:	create account				regine.issan@gmail.com	Pumikki14!
+				C.login
+				D.read doc https://www.cloudamqp.com/docs/index.html
+				E. create a cloudAMQP instance
+					login
+					create new istance:	name, plan (free), tag (DEV), region - london, 
+						
+				f. see instance details
+					login
+					top => list all instances => select some instance name => double click the instance name => 
+						AMQP URL	: the connection url
+						server name
+						user
+						password 
+
+	option2:	nor chosen
+				run tabbit mq on local machine (need to install Erlang)	
+				https://www.rabbitmq.com/	=>	download + installation => https://www.rabbitmq.com/install-windows.html => using the installer 
+
+				
+	option3:	not chosen
+				run rubbit mq on local machine using docker using docker to run rabbit mq on lcoal machine
+				docker run -p 5672:5672 rabbitmq		
+
+
+
+

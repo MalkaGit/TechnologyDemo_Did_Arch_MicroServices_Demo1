@@ -1,0 +1,9 @@
+
+3. create events (on X.Common)
+
+	
+4. implement helper classes and methods
+
+5. implement api endpoints
+
+6. subscribe to the messages
