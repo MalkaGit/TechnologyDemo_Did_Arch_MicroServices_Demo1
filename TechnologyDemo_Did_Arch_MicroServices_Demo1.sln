@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
 		Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt = Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt
-		Phase6_MessageBus_APIEndpoints.txt = Phase6_MessageBus_APIEndpoints.txt
+		Phase6_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt = Phase6_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject
