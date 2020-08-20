@@ -1,0 +1,16 @@
+goal:
+	define API endpoints
+	send messages to the bus
+
+1.	X.GateWay.ApiApp
+
+	add: TestPublshController.cs
+
+
+	[Route("")]
+    public class TestPublshController : Controller
+    {
+        [HttpGet("")]
+        public IActionResult Get() => Content("Hello from Test Publish Controller API!");
+    }
+
