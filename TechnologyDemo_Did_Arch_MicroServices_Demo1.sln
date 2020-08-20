@@ -18,9 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
 		Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt = Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt
-		Phase6_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt = Phase6_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt
+		Phase6_MessageBus_ConfigurationFile_And_IOC_Settings.txt = Phase6_MessageBus_ConfigurationFile_And_IOC_Settings.txt
+		Phase7_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt = Phase7_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.TestMessaging", "X.MS.TestMessaging\X.MS.TestMessaging.csproj", "{D3162057-CCA7-4BD4-A174-FA118BC67073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,10 @@ Global
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

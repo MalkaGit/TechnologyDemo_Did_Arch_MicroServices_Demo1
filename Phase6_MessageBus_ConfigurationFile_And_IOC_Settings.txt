@@ -1,0 +1,97 @@
+lecture 11
+
+goal: any (api or micro service) controller that needs to publish\subscribe to the message bus 
+      will get from the IOC and instance of IBusClient
+
+    eg:     on ApiGQ
+            public TestMessagingController(IBusClient BusClient)
+            {
+                this._BusClient = BusClient;
+            }
+
+
+1.	 documentation
+
+	open https://rawrabbit.readthedocs.io/	==> 
+	select vNext configuration file     that will open:		
+    https://rawrabbit.readthedocs.io/en/master/configuration.html#vnext-configuration-file
+
+
+
+2. appsettings.json: will hold settinfs to connect to the service bus (eg, rabbitMQ)
+
+    do this for the Api gateway prject
+    do this for all the microservices projects
+    note:   these settings will be loaded into Common\Helpers\1RabbitMQ\RabbitMqOptions.cs
+
+    
+
+    phase1: find what we need in config file
+    ===========================================================================================================
+	2.1 open	https://rawrabbit.readthedocs.io/en/master/configuration.html#vnext-configuration-file
+	
+     "rabbitmq": 
+    {
+        "Username":                 "guest",
+        "Password":                 "guest",
+        "VirtualHost":              "/",
+        "Port":                     5672,
+        "Hostnames":                [ "localhost" ],
+        "RequestTimeout":           "00:00:10",
+        "PublishConfirmTimeout":    "00:00:01",
+        "RecoveryInterval":         "00:00:10",
+        "PersistentDeliveryMode":   true,
+        "AutoCloseConnection":      true,
+        "AutomaticRecovery":        true,
+        "TopologyRecovery":         true,
+        "Exchange": 
+        {
+                "Durable":          true,
+                "AutoDelete":       true,
+                "Type":             "Topic"
+        },
+        "Queue": 
+        {
+                "AutoDelete":       true,
+                "Durable":          true,
+                "Exclusive":        true
+        }
+    },
+
+
+     phase2: 
+    ===========================================================================================================
+
+    2.2 for ant relevant projet, open the file appsettings.json and add the section above 
+
+
+
+
+
+   
+
+7.3 implement helper method that allows connecting to the service bus (rabbit mq) publish \ sunscribe messages 
+
+    see:    X.Common\Helpers\1RabbitMQ\RabbitMqExtensions.cs method: AddRabbitMq
+
+   goal:    the method tells to the IOC that whenever it needs IBusClient 
+            it will create an instance of RawRabbit 
+            that takes its settings from rabbitmq secion on the appsettings.json
+
+
+
+7.4  any app the work with the message bus needs to call the method AddRabbitMq
+
+
+    eg, in X.GateWay.ApiApp StartUp.cs 
+
+    public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+           ...
+
+            services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
+            ....
+        }    

@@ -75,16 +75,37 @@ namespace X.Common.Helpers._1RabbitMQ
 
 
 
+        /// <summary>
+        /// init IOC to map IBusClient 
+        /// to an instance of RawRabbit that takes its settings from rabbitmq secion on the appsettings.json
+        /// </summary>
+        /// <param name="services">
+        /// the ioc collection defined in the Gatewat app (or ser micro service app) on StartUp.cs file   public void ConfigureServices(IServiceCollection services)
+        /// </param>
+        /// <param name="configuration">
+        /// the content of te file appsettings.json
+        /// </param>
+        /// <remarks>
+        /// </remarks>
         public static void AddRabbitMq(this IServiceCollection services, IConfiguration configuration)
         {
-            var options = new RabbitMqOptions();
-            var section = configuration.GetSection("rabbitmq");
-            section.Bind(options);
+            //step1: read the rabbitmq settings from appsettings.json
+            var section             = configuration.GetSection("rabbitmq"); //the rabbitmq section in the conffuration file: appsettings.json 
+            var options             = new RabbitMqOptions();
+            //step2: rate instance of service bus RawRabbit that use that configuration
+
+            section.Bind(options); //options will hols all the reabbit mq settings in the appsettings.json
+
+            //step3: create instance of RawRabbit that implement IBusClient
             var client = RawRabbitFactory.CreateSingleton(new RawRabbitOptions
             {
                 ClientConfiguration = options
             });
-            services.AddSingleton<IBusClient>(_ => client);
+
+            //services collection is the IOc cnotainer
+            //register the RawRabbit onthe ioc as IBusClient  (to publish and subscribe to any message bus)
+            //note: we use dingletone becuase ew wnat the RawRabbit to mange the connection to to the message bus (rabbit mq)
+            services.AddSingleton<IBusClient>(_ => client);//register to the IOC IBusClient that is instance of RawRabbit with the settings from the appsettings.json
         }
     }
 

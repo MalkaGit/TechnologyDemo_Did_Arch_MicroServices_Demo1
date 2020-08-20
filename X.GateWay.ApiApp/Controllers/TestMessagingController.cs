@@ -24,6 +24,10 @@ namespace X.GateWay.ApiApp.Controllers
 
         /// <summary>
         /// IOC will send to the controller instance of the BusClient
+        /// 
+        /// see on staruup.Cs method  public void ConfigureServices(IServiceCollection services) calling  services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
+        /// also see on Common RabbitMQExtentions method AddRabbitMq
+        /// alos see RabbitMq settings oon the appsettings.json
         /// </summary>
         /// <param name="BusClient"></param>
         public TestMessagingController(IBusClient BusClient)

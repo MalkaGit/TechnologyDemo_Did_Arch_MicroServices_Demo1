@@ -9,9 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using X.Common.Helpers._1RabbitMQ;
 
-namespace X.GateWay.ApiApp
+namespace X.MS.TestMessaging
 {
     public class Startup
     {
@@ -26,8 +25,6 @@ namespace X.GateWay.ApiApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

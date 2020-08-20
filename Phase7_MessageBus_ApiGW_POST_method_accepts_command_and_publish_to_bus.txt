@@ -1,3 +1,4 @@
+//lecture 10
 goal:
 	API gateway accepts a command and publish it to the message bus 
     eg:  await this._BusClient.PublishAsync(command);
