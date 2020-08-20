@@ -5,9 +5,9 @@ goal:	create commands (on X.common)
 	ICommandHandler					-	executes a command that returns void asynchorinously
 										 command handlers are implemented in the the Services who consumes the command
 
-	AuthenticateUser				-	command to allow user to login
-	CreateUser						-   command to create new user
-	CreateActivity					- command to add activity to a user
+	AuthenticateUserCommand					-	command to allow user to login
+	CreateUserCommand						-   command to create new user
+	CreateActivityCommand					- command to add activity to a user
 	
 
 

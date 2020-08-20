@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace X.Common.Commands.Common
+namespace X.Common.Messages.Common.Commands
 {
     /// <summary>
-    /// executes a command that returns void asynchorinously
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">the type of te command that the handler will process</typeparam>
     /// <remarks>
-    /// 1. command handlers are implemented in the the Services who consumes the command
+    /// 1. command handler processes a command async and return void
+    /// 2. command handles are implemented by services
     /// </remarks>
     public interface ICommandHandler<in T> where T : ICommand
     {

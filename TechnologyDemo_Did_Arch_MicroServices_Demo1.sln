@@ -14,7 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
 	ProjectSection(SolutionItems) = preProject
 		Phase1_StartUp_CreateSoultion.txt = Phase1_StartUp_CreateSoultion.txt
-		Phase2_MessageBus_SetupMessageBus.txt = Phase2_MessageBus_SetupMessageBus.txt
+		Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt = Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
 		Phase9.txt = Phase9.txt

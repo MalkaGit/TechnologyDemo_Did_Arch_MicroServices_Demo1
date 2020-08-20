@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace X.Common.Commands.Common
+namespace X.Common.Messages.Common.Commands
 {
     /// <summary>
-    /// in order to run the command, the user has to be authenticated
+    /// Command that can be executed only by authorized users.
     /// </summary>
     public interface IAuthenticatedCommand : ICommand
     {
         /// <summary>
-        /// identifies the user who is authenticated to run the command
+        /// identifies the user who was authorized by the controller 
         /// </summary>
         Guid UserId { get; set; }
     }
