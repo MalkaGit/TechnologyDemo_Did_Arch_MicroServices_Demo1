@@ -25,9 +25,10 @@ namespace X.GateWay.ApiApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
+
             services.AddControllers();
 
-            services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

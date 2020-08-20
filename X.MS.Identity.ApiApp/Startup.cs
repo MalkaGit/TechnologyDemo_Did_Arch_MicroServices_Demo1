@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using X.Common.Helpers._1RabbitMQ;
 
 namespace X.MS.Identity.ApiApp
 {
@@ -25,6 +26,8 @@ namespace X.MS.Identity.ApiApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
+
             services.AddControllers();
         }
 

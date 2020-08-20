@@ -1,0 +1,74 @@
+//lecture 10
+goal:
+	API gateway has     POST    TestMessaging
+        -accepts a command on body
+        -pubish the message to the bus
+        
+
+1.  Create TestMessagingCommand, TestMessagingRejectedEvent,TestMessagingRejectedEvent
+
+
+2. TestMessaging contoller init the IOC ro map IBusClient with Raw Eabbit BusClient 
+
+    see: C:\Users\reginei\source\repos\TechnologyDemo_Did_Arch_MicroServices_Demo1\X.GateWay.ApiApp\Startup.cs
+         method: public void ConfigureServices(IServiceCollection services)
+         calls:   services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
+
+3. the callto AddRabbitMq reads from configuraiton fle the message bus settings
+
+    thus, make sure that the project that publish\scubxvrpte to the message bus has rabbitmq secion in the appsettings.jsn
+
+
+
+4. the publisher (TestMessagingconteoller) of the message 
+    has instance of the IBusClietn and data mmeber for it
+
+
+   #region properties 
+
+
+        /// <summary>
+        /// we will use RabbitMQ Message bus 
+        /// </summary>
+        private readonly IBusClient _BusClient;
+
+        #endregion
+
+        #region Constructor
+
+
+        /// <summary>
+        /// IOC will send to the controller instance of the BusClient
+        /// 
+        /// see on staruup.Cs method  public void ConfigureServices(IServiceCollection services) calling  services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
+        /// also see on Common RabbitMQExtentions method AddRabbitMq
+        /// alos see RabbitMq settings oon the appsettings.json
+        /// </summary>
+        /// <param name="BusClient"></param>
+        public TestMessagingController(IBusClient BusClient)
+        {
+            this._BusClient = BusClient;
+        }
+
+        #endregion 
+
+
+5. the publsiher has method that accpts command and publsih
+
+	1.3 POST method to accept command and publish it 
+     
+        /// <summary>
+        /// Tst the publish commnad
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost("")]
+        public async Task<IActionResult> Post([FromBody] TestMessagingCommand command)
+        { 
+            await this._BusClient.PublishAsync(command);
+
+            return Accepted();
+        }
+
+
+

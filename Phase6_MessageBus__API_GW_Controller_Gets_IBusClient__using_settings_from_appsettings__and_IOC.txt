@@ -1,7 +1,9 @@
 lecture 11
 
 goal: any (api or micro service) controller that needs to publish\subscribe to the message bus 
-      will get from the IOC and instance of IBusClient
+      will get from the IOC  IBusClient
+      (true type:  RawRabbit.Instantiation.Disposable.BusClient)
+
 
     eg:     on ApiGQ
             public TestMessagingController(IBusClient BusClient)
@@ -68,22 +70,32 @@ goal: any (api or micro service) controller that needs to publish\subscribe to t
 
 
 
+
+3. create helper method (AddRabbitMq) to init IOC 
    
+    see:    X.Common\Helpers\1RabbitMQ\RabbitMqExtensions.cs 
+            method: AddRabbitMq
 
-7.3 implement helper method that allows connecting to the service bus (rabbit mq) publish \ sunscribe messages 
+    goal:
+            IOC can call:
+            public TestMessagingController(IBusClient BusClient)
+            {
+                this._BusClient = BusClient;
+            }
 
-    see:    X.Common\Helpers\1RabbitMQ\RabbitMqExtensions.cs method: AddRabbitMq
+            how ?   when StartUp.cs calls services.AddRabbitMq(Configuration); 
+                    it init the IOC  so that 
+                    IBusClient 
+                    is mapped to 
+                    an instance  of RawRabbit 
+                            that uses the settings we defnied in config file
 
-   goal:    the method tells to the IOC that whenever it needs IBusClient 
-            it will create an instance of RawRabbit 
-            that takes its settings from rabbitmq secion on the appsettings.json
+  
 
 
+4. any app that needs to interact with the service bus, calls the  helper method (AddRabbitMq) to init IOC 
 
-7.4  any app the work with the message bus needs to call the method AddRabbitMq
-
-
-    eg, in X.GateWay.ApiApp StartUp.cs 
+     StartUp.cs 
 
     public IConfiguration Configuration { get; }
 
@@ -92,6 +104,40 @@ goal: any (api or micro service) controller that needs to publish\subscribe to t
         {
            ...
 
-            services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
+            services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
             ....
-        }    
+        }
+        
+5. any controller that needs t ineracto wit hservice bus 
+    saves a property IBusClient
+    its constructor gets IBusclient and saves it as a propery
+
+    \
+    see"
+      #region properties 
+
+
+        /// <summary>
+        /// we will use RabbitMQ Message bus 
+        /// </summary>
+        private readonly IBusClient _BusClient;
+
+        #endregion
+
+        #region Constructor
+
+
+        /// <summary>
+        /// IOC will send to the controller instance of the BusClient
+        /// 
+        /// see on staruup.Cs method  public void ConfigureServices(IServiceCollection services) calling  services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
+        /// also see on Common RabbitMQExtentions method AddRabbitMq
+        /// alos see RabbitMq settings oon the appsettings.json
+        /// </summary>
+        /// <param name="BusClient"></param>
+        public TestMessagingController(IBusClient BusClient)
+        {
+            this._BusClient = BusClient;
+        }
+
+        #endregion "

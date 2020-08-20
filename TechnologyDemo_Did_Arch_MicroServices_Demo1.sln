@@ -14,12 +14,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
 	ProjectSection(SolutionItems) = preProject
 		Phase1_StartUp_CreateSoultion.txt = Phase1_StartUp_CreateSoultion.txt
-		Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt = Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt
+		Phase2_MessageBus_Choose_ServiceBus.txt = Phase2_MessageBus_Choose_ServiceBus.txt
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
 		Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt = Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt
-		Phase6_MessageBus_ConfigurationFile_And_IOC_Settings.txt = Phase6_MessageBus_ConfigurationFile_And_IOC_Settings.txt
-		Phase7_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt = Phase7_MessageBus_ApiGW_POST_method_accepts_command_and_publish_to_bus.txt
+		Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt = Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt
+		Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt = Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject
