@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt = Phase2_MessageBus_SetupMessageBus_RabbitMQ.txt
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
+		Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt = Phase5_TODO_REPEAT_MessageBus__Helpers_to_Subscribe_And_Publish_messages.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject

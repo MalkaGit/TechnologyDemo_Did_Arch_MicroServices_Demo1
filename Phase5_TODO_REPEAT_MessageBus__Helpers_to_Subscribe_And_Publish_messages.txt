@@ -1,0 +1,53 @@
+TODO: repeat 9 
+goals:	
+1. create custom service host using fluent API
+2. create helper classes and extention method to help with sbscibing and publisheing messages
+
+
+Tasks
+
+1	to pubsih and subscribe to messages using RabbitMQ
+	we will create RabbitMq helpers in X.Common\Helpers\RabbitMq
+	
+	RawRabbit is A modern framework for communication over RabbitMq.
+												
+	1.0 add nuget packages to the common project 
+
+		use the Tools => nuget package manager => console. 
+				select project: X.common. 
+				Install-Package RawRabbit										-version 2.0.0-beta8
+				Install-Package RawRabbit.DependencyInjection.ServiceCollection -version 2.0.0-beta8
+				Install-Package RawRabbit.Operations.Publish					-version 2.0.0-beta8
+				Install-Package RawRabbit.Operations.Subscribe					-version 2.0.0-beta8
+
+				Note:	without the comnsole we can find the version
+						see: https://www.udemy.com/course/net-core-microservices/learn/lecture/8495422#questions/5926890
+
+
+	1.1	RabbitMqOptions
+	1.2	RabbitMqExtensions	(called in original project: Extentions)
+
+
+
+
+2.	to implement Custom Service host
+	we will create ServiceHost helpers in X.Common\Helpers\RabbitMq
+
+	common prokect: Helpers\ServiceHost
+	helpers for subcribing and Publishing messages (commands and events) over the service bus
+
+
+	2.0 add nuget packages to the common project
+		microsoft.aspnetcore
+		microsoft.aspnetcore.hosting			-	start up logic for we b applications
+	2.1 IServiceHost
+	2.2 ServiceHost
+
+
+
+
+
+
+
+	create api that will help us to define the types of messages to subsrbibe 
+	same code in different services 
