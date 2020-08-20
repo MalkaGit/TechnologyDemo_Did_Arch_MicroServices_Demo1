@@ -1,18 +1,29 @@
 Create solution:
+
 1.	add project X.Common
 	class library (.Net core)
-2.  add project X.GeteWay.ApiApp
+
+2.  add Gateway project:	X.GeteWay.ApiApp
+	
 	add => new project => Asp.Net Core Web Application => API
 	uncheck:	Configure for https
 	uncheck:	Enable Docket
 	No authentication
-3.  add prject X.MS.Activities
-4.  add project X.MS.Identity
-5.  add project X.MS.TestMessaging
+
+
+3.  add microservce projects (same)
+
+3.1		add project X.MS.Activities
+3.2		add project X.MS.Identity
+3.3		add project X.MS.TestMessaging
+
 
 5.  add references
+
 5.1 X.GeteWay.ApiApp		references X.Common
 5.2 X.MS.Activities			references X.Common
 5.3 X.MS.Identity			references X.Common
 5.4 X.MS.TestMessaging		references X.Common
+
+
 

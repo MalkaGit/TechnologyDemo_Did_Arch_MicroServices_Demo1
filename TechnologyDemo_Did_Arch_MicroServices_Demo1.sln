@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.GateWay.ApiApp", "X.GateWay.ApiApp\X.GateWay.ApiApp.csproj", "{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.GateWay.ApiApp", "X.GateWay.ApiApp\X.GateWay.ApiApp.csproj", "{2B5010D6-AB22-40DE-B2AC-1A327ECB96AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.Activities.Api.App", "X.MS.Activities.Api.App\X.MS.Activities.Api.App.csproj", "{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.Activities.Api.App", "X.MS.Activities.Api.App\X.MS.Activities.Api.App.csproj", "{100159AC-B1A1-4F4F-9ACD-9C04C7ABC7F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.Identity.ApiApp", "X.MS.Identity.ApiApp\X.MS.Identity.ApiApp.csproj", "{5054BE12-9A23-4E2E-80F2-67311DE4B382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.Identity.ApiApp", "X.MS.Identity.ApiApp\X.MS.Identity.ApiApp.csproj", "{5054BE12-9A23-4E2E-80F2-67311DE4B382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.Common", "X.Common\X.Common.csproj", "{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Common", "X.Common\X.Common.csproj", "{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
 	ProjectSection(SolutionItems) = preProject
-		Phase1_StartUp_CreateSoultion.txt = Phase1_StartUp_CreateSoultion.txt
+		Phase1_Archtecture__create_solution_and_porjects.txt = Phase1_Archtecture__create_solution_and_porjects.txt
 		Phase2_MessageBus_Choose_ServiceBus.txt = Phase2_MessageBus_Choose_ServiceBus.txt
 		Phase3_MessageBus_Define_Commands.txt = Phase3_MessageBus_Define_Commands.txt
 		Phase4_MessageBus_Define_Events.txt = Phase4_MessageBus_Define_Events.txt
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.TestMessaging", "X.MS.TestMessaging\X.MS.TestMessaging.csproj", "{D3162057-CCA7-4BD4-A174-FA118BC67073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.TestMessaging", "X.MS.TestMessaging\X.MS.TestMessaging.csproj", "{D3162057-CCA7-4BD4-A174-FA118BC67073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
