@@ -1,4 +1,26 @@
-TODO: repeat 9 
+TODO:	repeat
+video:	9
+
+
+===============================================================
+0. bad 
+===============================================================
+
+
+===============================================================
+1. goal
+===============================================================
+
+
+1	to pubsih and subscribe to messages using RabbitMQ
+	we will create RabbitMq helpers in X.Common\Helpers\RabbitMq
+	
+	RawRabbit is A modern framework for communication over RabbitMq.
+	
+
+
+
+
 goals:	
 1. create custom service host using fluent API
 2. create helper classes and extention method to help with sbscibing and publisheing messages
@@ -6,11 +28,7 @@ goals:
 
 Tasks
 
-1	to pubsih and subscribe to messages using RabbitMQ
-	we will create RabbitMq helpers in X.Common\Helpers\RabbitMq
-	
-	RawRabbit is A modern framework for communication over RabbitMq.
-												
+											
 	1.0 add nuget packages to the common project 
 
 		use the Tools => nuget package manager => console. 
