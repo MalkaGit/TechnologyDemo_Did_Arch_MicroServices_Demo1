@@ -7,6 +7,44 @@ video:	9
 ===============================================================
 
 
+1.	Goal
+		many classes will work with service bus
+		eg: to publish		a message (command or event)
+			to subscibe to	a message (command or event)
+		
+		we call these classes BusClients
+		Here we will create helper methods to consume the service bus
+
+===============================================================
+2.	Using 
+	helper library RawRabbit
+===============================================================
+	
+
+
+
+===============================================================
+3.  Configuration to connect to the service bus from bus client
+	see:	RabbiMqOptions.cs in X.Common
+===============================================================
+	/// <summary>
+	///holds the settings  to connect to the (RabbitMq) message bus from bus client 
+	/// </summary>
+	/// <remarks>
+	/// 1.	the settings comes from  appsettings.json file (rabbitmq sectinos).
+	///2.	every porject that communicate with the service bus
+	///		defiee these settings in its appsettings.json.
+	///		eg:		X.GateWay.ApiApp, 
+	///				X.MS.Activities.Api.App,X.MS.Identity.ApiApp, X.MS.TestMessaging    
+	/// </remarks>
+
+
+
+
+
+
+
+
 ===============================================================
 1. goal
 ===============================================================

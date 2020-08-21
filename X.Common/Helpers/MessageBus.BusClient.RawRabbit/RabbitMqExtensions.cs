@@ -8,7 +8,7 @@ using RawRabbit.Pipe;
 using X.Common.Messages.Common.Commands;
 using X.Common.Messages.Common.Events;
 
-namespace X.Common.Helpers.MessageBus.RabbitMQ
+namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
 {
     public static class RabbitMqExtensions
     {
