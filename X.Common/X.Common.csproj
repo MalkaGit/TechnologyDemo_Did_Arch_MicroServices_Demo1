@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helpers\3MongoDB\**" />
+    <EmbeddedResource Remove="Helpers\3MongoDB\**" />
+    <None Remove="Helpers\3MongoDB\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="RawRabbit" Version="2.0.0-beta8" />
@@ -14,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\3MongoDB\" />
+    <Folder Include="Helpers\MessageBus\" />
+    <Folder Include="Helpers\MongoDB\" />
   </ItemGroup>
 
 </Project>

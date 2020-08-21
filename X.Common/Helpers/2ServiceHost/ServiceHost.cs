@@ -5,10 +5,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using RawRabbit;
-using X.Common.Helpers._1RabbitMQ;
 using X.Common.Messages.Common.Commands;
 using X.Common.Messages.Common.Events;
-
+using X.Common.Helpers.MessageBus.RabbitMQ;
 
 namespace X.Common.Helpers._2ServiceHost
 {

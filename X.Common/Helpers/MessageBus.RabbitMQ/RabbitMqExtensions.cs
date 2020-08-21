@@ -8,9 +8,7 @@ using RawRabbit.Pipe;
 using X.Common.Messages.Common.Commands;
 using X.Common.Messages.Common.Events;
 
-
-
-namespace X.Common.Helpers._1RabbitMQ
+namespace X.Common.Helpers.MessageBus.RabbitMQ
 {
     public static class RabbitMqExtensions
     {
@@ -30,7 +28,7 @@ namespace X.Common.Helpers._1RabbitMQ
             this IBusClient bus,
             ICommandHandler<TCommand> handler
         ) where TCommand : ICommand
-            => 
+            =>
             bus.SubscribeAsync<TCommand>(
                 msg => handler.HandleAsync(msg),
                 ctx => ctx.UseConsumerConfiguration(
@@ -51,7 +49,7 @@ namespace X.Common.Helpers._1RabbitMQ
             this IBusClient bus,
             IEventHandler<TEvent> handler
        ) where TEvent : IEvent
-            => 
+            =>
             bus.SubscribeAsync<TEvent>(
                 msg => handler.HandleAsync(msg),
                 ctx => ctx.UseConsumerConfiguration(
@@ -66,7 +64,7 @@ namespace X.Common.Helpers._1RabbitMQ
 
 
         private static string GetQueueName<T>()
-            => 
+            =>
             $"{Assembly.GetEntryAssembly().GetName()}/{typeof(T).Name}";
 
 
@@ -90,8 +88,8 @@ namespace X.Common.Helpers._1RabbitMQ
         public static void AddRabbitMq(this IServiceCollection services, IConfiguration configuration)
         {
             //step1: read the rabbitmq settings from appsettings.json
-            var section             = configuration.GetSection("rabbitmq"); //the rabbitmq section in the conffuration file: appsettings.json 
-            var options             = new RabbitMqOptions();
+            var section = configuration.GetSection("rabbitmq"); //the rabbitmq section in the conffuration file: appsettings.json 
+            var options = new RabbitMqOptions();
             //step2: rate instance of service bus RawRabbit that use that configuration
 
             section.Bind(options); //options will hols all the reabbit mq settings in the appsettings.json
@@ -108,6 +106,4 @@ namespace X.Common.Helpers._1RabbitMQ
             services.AddSingleton<IBusClient>(_ => client);//register to the IOC IBusClient that is instance of RawRabbit with the settings from the appsettings.json
         }
     }
-
-
 }
