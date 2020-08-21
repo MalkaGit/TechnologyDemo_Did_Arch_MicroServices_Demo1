@@ -5,11 +5,12 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using RawRabbit;
+using X.Common.Helpers.MessageBus.BusClient.RawRabbit;
 using X.Common.Messages.Common.Commands;
 using X.Common.Messages.Common.Events;
-using X.Common.Helpers.MessageBus.RabbitMQ;
 
-namespace X.Common.Helpers._2ServiceHost
+
+namespace X.Common.Helpers.ServiceHost
 {
 
 
@@ -72,13 +73,6 @@ namespace X.Common.Helpers._2ServiceHost
         }
 
         #endregion
-
-
-
-
-
-
-
 
         #region nested Builder (factory) classes
 
@@ -270,7 +264,6 @@ namespace X.Common.Helpers._2ServiceHost
 
 
         #endregion
-
         
     }
 }

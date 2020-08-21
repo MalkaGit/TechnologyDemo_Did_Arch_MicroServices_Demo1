@@ -8,7 +8,7 @@ namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
 {
 
 	/// <summary>
-	///holds the settings  to connect to the (RabbitMq) message bus from bus client 
+	///helper class to hold the "connection string" to (RabitMq) message bus 
 	/// </summary>
 	/// <remarks>
 	/// 1.	the settings comes from  appsettings.json file (rabbitmq sectinos).

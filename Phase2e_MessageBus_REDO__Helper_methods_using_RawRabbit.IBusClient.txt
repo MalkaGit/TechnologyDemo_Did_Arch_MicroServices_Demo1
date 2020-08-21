@@ -1,0 +1,112 @@
+TODO:	repeat
+video:	9
+
+
+===============================================================
+0. bad 
+0.1 why do we need the AddRabbitMq ?
+	meaning, why do we need IOC    ?!
+
+	se simple snigletone !
+===============================================================
+
+
+1.	Goal
+		many classes will work with service bus (will be BusClients)
+				to publish		a message (command or event)
+				to subscibe to	a message (command or event)
+
+		the goal is to create Helper methods
+		to work with message bus using RawRabbit.IBusClient
+		against the RabbitMQ message bus
+
+	
+
+===============================================================
+2.	Choose and reference package to consue the service bus
+===============================================================
+
+2.1	choose library
+	RawRabbit is greate package for consuming RabbitMQ message bus
+
+2.2 reference the libray
+
+	add to the X.Common project the packages to use RawRabbit
+
+	note:	we can install it only fromm console
+			see: https://www.udemy.com/course/net-core-microservices/learn/lecture/8495422#questions/5926890
+
+	Tools => nuget package manager => console. 
+				select project: X.common. 
+				Install-Package RawRabbit										-version 2.0.0-beta8
+				Install-Package RawRabbit.DependencyInjection.ServiceCollection -version 2.0.0-beta8
+				Install-Package RawRabbit.Operations.Publish					-version 2.0.0-beta8
+				Install-Package RawRabbit.Operations.Subscribe					-version 2.0.0-beta8
+
+
+
+
+===============================================================
+3.  helper class to hold the "connection string" to RabbitMQ
+	see:	RabbiMqOptions.cs in X.Common
+===============================================================
+	/// <summary>
+	///helper class to hold the "connection string" to (RabitMq) message bus 
+	/// </summary>
+	/// <remarks>
+	/// 1.	the settings comes from  appsettings.json file (rabbitmq sectinos).
+	///2.	every porject that communicate with the service bus
+	///		defiee these settings in its appsettings.json.
+	///		eg:		X.GateWay.ApiApp, 
+	///				X.MS.Activities.Api.App,X.MS.Identity.ApiApp, X.MS.TestMessaging    
+	/// </remarks>
+
+
+
+
+==============================================================================
+3.  helper method 
+        ///configure the IOC container with details 
+        ///of how to create and initalize an instance of RawTabbit.IBusClient
+
+	see:	AddRabbitMq methos 
+			on RabbiMqExtentions.cs 
+			on X.Common
+==============================================================================
+
+	note: the IBusClient read its settings from rabbitmq section in appsettings.json
+
+
+
+==============================================================================
+3.  TODO:	helper method 
+
+	see:	WithCommandHandlerAsync methos 
+			on RabbiMqExtentions.cs 
+			on X.Common
+==============================================================================
+
+
+
+
+==============================================================================
+4.  TODO:	helper method 
+
+	see:	WithEventHandlerAsync methos 
+			on RabbiMqExtentions.cs 
+			on X.Common
+==============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

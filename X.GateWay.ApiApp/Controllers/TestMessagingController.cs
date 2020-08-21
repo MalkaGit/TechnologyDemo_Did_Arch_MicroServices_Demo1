@@ -11,10 +11,14 @@ namespace X.GateWay.ApiApp.Controllers
     {
         #region properties 
 
-
         /// <summary>
-        /// we will use RabbitMQ Message bus 
+        /// interface for communicating with the (RabbitMq) message bus
         /// </summary>
+        /// <remarks>
+        /// 1   this is an instance of Rbabbit.IBusClient
+        /// 2.  Startup.js calls the AddRabbitMq method to tell the IOC how to create the IBusClient.
+        /// 3.  the IBusClient takes its settings from rabbitmq  section on appsettings.json
+        /// </remarks>
         private readonly IBusClient _BusClient;
 
         #endregion
@@ -23,13 +27,12 @@ namespace X.GateWay.ApiApp.Controllers
 
 
         /// <summary>
-        /// IOC will send to the controller instance of the BusClient
-        /// 
-        /// see on staruup.Cs method  public void ConfigureServices(IServiceCollection services) calling  services.AddRabbitMq(Configuration); //establih aconnection and configure the service bus
-        /// also see on Common RabbitMQExtentions method AddRabbitMq
-        /// alos see RabbitMq settings oon the appsettings.json
+        /// IOC will send the IBusClient instance argummnent
         /// </summary>
         /// <param name="BusClient"></param>
+        /// <remarks>
+        /// 1.  Startup.js calls the AddRabbitMq method to tell the IOC how to create the IBusClient.
+        /// </remarks>
         public TestMessagingController(IBusClient BusClient)
         {
             this._BusClient = BusClient;

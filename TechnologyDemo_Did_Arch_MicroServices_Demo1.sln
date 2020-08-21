@@ -14,11 +14,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
 	ProjectSection(SolutionItems) = preProject
 		Phase1_Archtecture__create_solution_and_porjects.txt = Phase1_Archtecture__create_solution_and_porjects.txt
+		Phase2_MessageBus.txt = Phase2_MessageBus.txt
 		Phase2a_MessageBus__Choose_technoloy.txt = Phase2a_MessageBus__Choose_technoloy.txt
 		Phase2b_MessageBus__Configure_RabbitMQ.txt = Phase2b_MessageBus__Configure_RabbitMQ.txt
 		Phase2c_MessageBus_Define_Commands.txt = Phase2c_MessageBus_Define_Commands.txt
 		Phase2d_MessageBus_Define_Events.txt = Phase2d_MessageBus_Define_Events.txt
-		Phase2e_MessageBus_REDO__Helper_methods_to_work_with_message_bus_using_RawRabbit.IBusClient.txt = Phase2e_MessageBus_REDO__Helper_methods_to_work_with_message_bus_using_RawRabbit.IBusClient.txt
+		Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt = Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt
+		Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt = Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt
 		Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt = Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt
 		Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt = Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt
 		Phase9.txt = Phase9.txt
