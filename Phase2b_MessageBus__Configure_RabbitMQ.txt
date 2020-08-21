@@ -1,0 +1,36 @@
+===============================================
+option1:	run rabbit mq on cloud	-	chosen
+===============================================
+			A.see plan:	https://www.cloudamqp.com/	==> pricing => you will see they have plan for free 
+			B.sign up:	create account				regine.issan@gmail.com	Pumikki14!
+			C.login
+			D.read doc https://www.cloudamqp.com/docs/index.html
+			E. create a cloudAMQP instance
+				login
+				create new istance:	name, plan (free), tag (DEV), region - london, 
+						
+			F. see instance details
+				login
+				top => list all instances => select some instance name => double click the instance name => 
+				AMQP URL	: the connection url
+				server name
+				user
+				password 
+
+===============================================
+option2:	run RabbiMQ on local mmachine 
+===============================================
+				note: you will need to install Erlang	
+				how ?
+					https://www.rabbitmq.com/						=>	
+					download + installation							=> 
+					https://www.rabbitmq.com/install-windows.html	=> 
+					using the installer 
+
+===============================================				
+option3:	run RabbitMQ using docker on local mmachine
+===============================================
+			docker run -p 5672:5672 rabbitmq		
+
+
+

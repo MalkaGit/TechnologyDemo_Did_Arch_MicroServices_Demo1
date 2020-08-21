@@ -1,12 +1,14 @@
-goal:	create events (on X.common)
-Notes:
-    /// 1.  events have only getters and no setters, the constructor sets the data.
-    /// 2.  protected consstructor used for serialization
+create events (on X.common)
+
 
 IEvent
 IAuthenticatedEvent
 IRejectedEvent
 IEventHandler
+
+
+MessagingTestedEvent
+TestMessagingRejectedEvent
 
 UserAuthenticatedEvent
 AuthenticateUserRejectedEvent

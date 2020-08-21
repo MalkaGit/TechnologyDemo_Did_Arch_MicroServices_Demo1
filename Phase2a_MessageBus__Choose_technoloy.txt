@@ -1,0 +1,52 @@
+1.	background
+	1.1	pub-sub design pattern
+		two components can communicate with each other, 
+		without knowing each other.
+	
+	1.2	 message bus 
+		message bus is a way to implement pub-sub.
+		message bus allows commmunication between proceeses, application, servers,
+		without knowing each other.
+		the sender and the receiver are de-coupled (dont know each other)
+		This way, system is more robust since you can cange the componnets 
+		with minimal affect
+
+
+		message bus \ messge queue is a service.
+		publisher can send a message to the bus. 
+			eg: commands (from GW to service), 
+			wg:	events (from service to GW or from service to other service)
+		subscriber can subscribe to some message (type)
+		serveral subscribers can subscribe to the same message
+
+
+		usage:
+		in micro services world
+			the API gatemay		may send command	messages	to the micro services 
+			the microservices	may send event		messages	to the api gateway
+			the microservices	may send commands\events		to other micro services 
+	
+
+2. message bus technologies
+
+2.1 RabbitMQ				
+
+	most popular, relaiable 
+	https://www.rabbitmq.com/ 
+	read:	
+		https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html
+		https://www.cloudamqp.com/docs/monitoring.html	
+		https://www.rabbitmq.com/tutorials/amqp-concepts.html
+		https://www.cloudamqp.com/docs/index.html
+		https://www.cloudamqp.com/blog/2015-09-03-part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html	
+								
+2.2	Azure service bus		
+	https://azure.microsoft.com/en-us/services/service-bus/?&ef_id=CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&OCID=AID2100061_SEM_CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&dclid=CLXQ4Pqdp-sCFbPFuwgdhGQBrQ
+	
+2.3	zero mq					https://www.rabbitmq.com/
+	
+
+
+we will use RabitMQ	=> download and installation
+
+
