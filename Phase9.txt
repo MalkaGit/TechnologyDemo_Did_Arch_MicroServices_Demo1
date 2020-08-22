@@ -1,9 +1,50 @@
 
-3. create events (on X.Common)
 
-	
-4. implement helper classes and methods
+==============================================================================================
+GW register and handle the success event: eg, Activity created
+=================================================================================================
 
-5. implement api endpoints
+==>GateWay will handle success event
+    A.  define in common the event: ActivityCreatedEvent 
+    B.  define in the API GW: handler 
+         public class ActivityCreatedHandler : IEventHandler<ActivityCreated>
+         {
+            public async Task HandleAsync(ActivityCreated @event)
+            {
+               //stupod
+               awit Task.completedTask;z
+                Console.WriteLine($"Activity created: {@event.Name}");
+                //later on we migt add to repositry
+            }
 
-6. subscribe to the messages
+         }
+
+        C.  init IOC : map the event to the event handler 
+            in the GateWay, Startup.cs method public void ConfigureServices(IServiceCollection services)
+            calls
+                            services.AddScoped<IEventHandler<ActivityCreatedEvent>, ActivityCreatedHandler>();
+
+
+
+        C.  subscribe to the bus  
+            when the bus gets ActivityCreatedd event
+            it will fire the activityCreaedEventHandler
+
+            eg, in APIGW project, Programm.cs
+            public static void Main(string[] args)
+            {
+                ServiceHost //fro common
+                .Create<Startup>(args)
+                .UseRabbitMq()  //our fluent api
+                .SubscribeToEvent<ActivityCreatedEbent>()   //find the event handler an subscribe  
+                .Build()
+                .Run();
+            }
+
+
+
+            SubscribeToEvent - 
+                    use IOC to find the envetn handler
+                    then it tells the bus to nanlge the event usingthat handler
+
+     

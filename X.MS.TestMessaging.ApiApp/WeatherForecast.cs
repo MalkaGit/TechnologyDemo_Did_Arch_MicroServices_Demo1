@@ -1,6 +1,6 @@
 using System;
 
-namespace X.MS.TestMessaging
+namespace X.MS.TestMessaging.ApiApp
 {
     public class WeatherForecast
     {

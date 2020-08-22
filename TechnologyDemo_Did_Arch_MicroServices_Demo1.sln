@@ -21,12 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase2d_MessageBus_Define_Events.txt = Phase2d_MessageBus_Define_Events.txt
 		Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt = Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt
 		Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt = Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt
-		Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt = Phase6_MessageBus__API_GW_Controller_Gets_IBusClient__using_settings_from_appsettings__and_IOC.txt
-		Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt = Phase7_MessageBus_API_GW_Contorlle_POST_accept_command_and_Publish_it_the_bus.txt
+		Phase3_MessageBusDemo.txt = Phase3_MessageBusDemo.txt
+		Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt = Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt
+		Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt = Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.TestMessaging", "X.MS.TestMessaging\X.MS.TestMessaging.csproj", "{D3162057-CCA7-4BD4-A174-FA118BC67073}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X.MS.TestMessaging.ApiApp", "X.MS.TestMessaging.ApiApp\X.MS.TestMessaging.ApiApp.csproj", "{D18011BF-C705-4AC5-B455-012E2D6B4892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +51,10 @@ Global
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3162057-CCA7-4BD4-A174-FA118BC67073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

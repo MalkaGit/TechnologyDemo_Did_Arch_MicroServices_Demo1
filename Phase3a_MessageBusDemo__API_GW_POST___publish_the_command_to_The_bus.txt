@@ -1,0 +1,187 @@
+
+
+lecture 11, 10
+
+ask:
+    post creates the new id 
+
+bad!!!!!
+    the controllerr TestMessaging knows the RawRabbit (it has IBusClient)
+    what if we will want to use other message bus provider 
+
+goal:   
+
+        API gateway will exposet  TestMessagingController 
+        with POST action.
+        the POST will accept a commmand 
+        the POST will publish the commmand to the message bus async
+        the POST will return status code: accepted
+        
+        the command to the message bus     (so the relevant micro service will handle the command)
+            
+            
+
+=======================================================================================================
+step0: define in X.Common the Command
+=======================================================================================================
+
+eg, TestMessagingCommand.cs
+
+
+=======================================================================================================
+step1 - Stetttings: 
+        the publisher (gateway app),
+        needs the "connection string" to (RabbitMq) message bus
+=======================================================================================================
+
+goal:
+         appsettings.json file (in TestMessaging app) will hold rabbitmq section 
+         these settings will be loaded into RabbitMqOptions.cs
+         and sent to RawRabbit.BusClient so it knows how to connect to the (RabbitMq) message bus 
+
+
+notes:
+1.	    documentation
+    	    open https://rawrabbit.readthedocs.io/	==> 
+	        select vNext configuration file     that will open:		
+            https://rawrabbit.readthedocs.io/en/master/configuration.html#vnext-configuration-file
+
+
+Tasks:
+    1. open https://rawrabbit.readthedocs.io/en/master/configuration.html#vnext-configuration-file
+	   to find the json
+
+    2. add to  appsettings.json asection:
+
+
+     "rabbitmq": 
+    {
+        "Username":                 "guest",
+        "Password":                 "guest",
+        "VirtualHost":              "/",
+        "Port":                     5672,
+        "Hostnames":                [ "localhost" ],
+        "RequestTimeout":           "00:00:10",
+        "PublishConfirmTimeout":    "00:00:01",
+        "RecoveryInterval":         "00:00:10",
+        "PersistentDeliveryMode":   true,
+        "AutoCloseConnection":      true,
+        "AutomaticRecovery":        true,
+        "TopologyRecovery":         true,
+        "Exchange": 
+        {
+                "Durable":          true,
+                "AutoDelete":       true,
+                "Type":             "Topic"
+        },
+        "Queue": 
+        {
+                "AutoDelete":       true,
+                "Durable":          true,
+                "Exclusive":        true
+        }
+    },
+
+
+
+
+=======================================================================================================
+step2 - Settings
+            the publisher class needs an interface (eg, RawRabbit.IBusClient)
+            to commmunicate with the bus  (Eg, RabbitMq)
+
+=======================================================================================================
+
+eg, X.GateWay.ApiApp will have a contrroller:   TestMessagingController 
+
+
+        #region properties 
+
+        /// <summary>
+        /// interface for communicating with the (RabbitMq) message bus
+        /// </summary>
+        /// <remarks>
+        /// 1   this is an instance of Rbabbit.IBusClient
+        /// 2.  Startup.js calls the AddRabbitMq method to tell the IOC how to create the IBusClient.
+        /// 3.  the IBusClient takes its settings from rabbitmq  section on appsettings.json
+        /// </remarks>
+        private readonly IBusClient _BusClient;
+
+        #endregion
+
+
+
+
+
+
+
+=======================================================================================================
+step3 - Settings
+            the publisher class will init the BusClient in its constuctor
+            Note: IOC will call the constructor with an iinstance of RawRabbit.BusClient as RawRabbit.IBusClient
+=======================================================================================================
+        
+        eg, X.GateWay.ApiApp will have a controller TestMessagingController:
+
+        /// <summary>
+        /// IOC will send the IBusClient instance argummnent
+        /// </summary>
+        /// <param name="BusClient"></param>
+        /// <remarks>
+        /// 1.  Startup.js calls the AddRabbitMq method to tell the IOC how to create the IBusClient.
+        /// </remarks>
+        public TestMessagingController(IBusClient BusClient)
+        {
+            this._BusClient = BusClient;
+        }
+
+        #endregion 
+
+
+
+=======================================================================================================
+step4 - Settings 
+        the pblisher app will init the IOC 
+        to reutrn BusClient when  it is asdked for IBusClient
+=======================================================================================================
+
+    the StartUp.cs of the publisher app (GW app)
+
+            // This method gets called by the runtime. Use this method to add services to the container.
+            public void ConfigureServices(IServiceCollection services)
+            {
+                ...
+
+                services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
+                ....
+            }
+    
+    
+            note: earlier  we implemented the helper AddRabbbitMq
+            
+=======================================================================================================
+step5 - publishing commnad
+        
+        publisher (API gateway) defines endoint 
+        that accepts the TestMessagin command 
+        and pblishes the commmand to the bus 
+        (to communicate with other micro services)
+=======================================================================================================
+    notes:
+    1. PublishAsync returns Task . meaing it is async task that reutens void
+
+    see: POST method on   TestMessaingController.cs on  X.GateWay.Api.App
+
+        /// <summary>
+        /// Accepts command and publsihes it to the (RabbitMq) message bus 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost("")]
+        public async Task<IActionResult> Post([FromBody] TestMessagingCommand command)
+        {
+         
+            await this._BusClient.PublishAsync(command);
+
+            return Accepted();
+        }

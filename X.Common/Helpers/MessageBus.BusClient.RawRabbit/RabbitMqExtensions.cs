@@ -16,8 +16,8 @@ namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
         ///<summary>
         ///configure the IOC container with details of how to create and initalize an instance of RawRabbit.IBusClient
         ///</summary>
-        ///<param name="services">the IOC container mappings </param>
-        ///<param name="configuration">the configuration from appsettings.json file </param>
+        ///<param name="services">the IOC container that commes from ASP.Net core </param>
+        ///<param name="configuration">the configuration object that holds the settings from appsettings.json file </param>
         ///<usage>
         ///1.   Any application that interacts with (RabbitMq) service bus has to
         ///     call this method from  ConfigureServices(IServiceCollection services) on Startup.
@@ -59,7 +59,7 @@ namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
         /// </usage>
         /// <remarks>
         /// 1.  the IBusClient read its settings from rabbitmq section in appsettings.json
-        /// 2.  we use singletone istance of the IBusClient
+        /// 2.  we use singletone istance !!!  of the IBusClient
         ///     we use singletone becuase we wnat the RawRabbit to mange the connection to to the message bus (rabbit mq)
         /// </remarks>
         public static void AddRabbitMq(this IServiceCollection services, IConfiguration configuration)
@@ -72,12 +72,12 @@ namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
             section.Bind(options);
 
 
-            //step3: create  instance of RawRabbit.BusClient  (sngletone) 
+            //step3: create  instance of RawRabbit.BusClient  (sngletone !!!) 
             var client = RawRabbitFactory.CreateSingleton(
                 new RawRabbitOptions    {ClientConfiguration = options});
 
 
-            //step4: configure IOC to map RawRabbit.IBusClient to RawRabbit.BusClient (sngletone)
+            //step4: configure IOC to map RawRabbit.IBusClient to RawRabbit.BusClient (sngletone !!!)
             services.AddSingleton<IBusClient>(_ => client);
         }
 

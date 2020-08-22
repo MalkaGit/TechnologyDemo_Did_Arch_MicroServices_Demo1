@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace X.MS.TestMessaging.Controllers
+namespace X.MS.TestMessaging.ApiApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]

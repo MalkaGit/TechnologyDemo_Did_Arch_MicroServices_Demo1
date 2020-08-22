@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using X.Common.Helpers.MessageBus.BusClient.RawRabbit;
 
-namespace X.MS.TestMessaging
+namespace X.MS.TestMessaging.ApiApp
 {
     public class Startup
     {
@@ -25,8 +26,8 @@ namespace X.MS.TestMessaging
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Added:
-            services.AddRabbitMq(Configuration);
+
+            services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
 
             services.AddControllers();
         }
@@ -38,6 +39,8 @@ namespace X.MS.TestMessaging
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

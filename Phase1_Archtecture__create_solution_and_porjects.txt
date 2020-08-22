@@ -13,9 +13,9 @@ Create solution:
 
 3.  add microservce projects (same)
 
-3.1		add project X.MS.Activities
-3.2		add project X.MS.Identity
-3.3		add project X.MS.TestMessaging
+3.1		add project X.MS.Activities.ApiApp
+3.2		add project X.MS.Identity.ApiApp
+3.3		add project X.MS.TestMessaging.ApiApp
 
 
 5.  add references

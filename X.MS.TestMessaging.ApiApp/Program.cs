@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace X.MS.TestMessaging
+namespace X.MS.TestMessaging.ApiApp
 {
     public class Program
     {

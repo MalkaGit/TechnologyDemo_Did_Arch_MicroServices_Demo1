@@ -1,10 +1,14 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using RawRabbit;
-using X.Common.Messages.MessagingTest;
 
-namespace X.GateWay.ApiApp.Controllers
+namespace X.MS.TestMessaging.ApiApp.Controllers
 {
+   
     [ApiController]
     [Route("[controller]")]
     public class TestMessagingController : ControllerBase
@@ -23,9 +27,8 @@ namespace X.GateWay.ApiApp.Controllers
 
         #endregion
 
-        #region Constructor
-
-
+        #region Constructor 
+        
         /// <summary>
         /// IOC will send the IBusClient instance argummnent
         /// </summary>
@@ -38,27 +41,8 @@ namespace X.GateWay.ApiApp.Controllers
             this._BusClient = BusClient;
         }
 
-        #endregion 
-
-
-       
-        /// <summary>
-        /// Accepts command and publsihes it to the (RabbitMq) message bus 
-        /// </summary>
-        /// <param name="command"></param>
-        /// <returns></returns>
-        [HttpPost("")]
-        public async Task<IActionResult> Post([FromBody] TestMessagingCommand command)
-        {
-         
-            await this._BusClient.PublishAsync(command);
-
-            return Accepted();
-        }
+        #endregion
 
     }
-
-
-
 
 }
