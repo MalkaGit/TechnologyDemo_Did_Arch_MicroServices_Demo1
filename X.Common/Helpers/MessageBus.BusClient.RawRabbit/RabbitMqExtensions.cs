@@ -73,6 +73,7 @@ namespace X.Common.Helpers.MessageBus.BusClient.RawRabbit
 
 
             //step3: create  instance of RawRabbit.BusClient  (sngletone !!!) 
+            //TODO: Log
             var client = RawRabbitFactory.CreateSingleton(
                 new RawRabbitOptions    {ClientConfiguration = options});
 

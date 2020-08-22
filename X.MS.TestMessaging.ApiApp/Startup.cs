@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using X.Common.Helpers.MessageBus.BusClient.RawRabbit;
+using X.Common.Messages.Common.Commands;
+using X.Common.Messages.MessagingTest;
+using X.MS.TestMessaging.ApiApp.MessageHandlers.MessagingTest;
 
 namespace X.MS.TestMessaging.ApiApp
 {
@@ -25,9 +28,9 @@ namespace X.MS.TestMessaging.ApiApp
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-
-            services.AddRabbitMq(Configuration); //configure ocnnection to the service bus
+        { 
+            services.AddRabbitMq(Configuration); //Added: configure ocnnection to the service bus
+            services.AddScoped<ICommandHandler<TestMessagingCommand>, TestMessagingCommandHandler>(); //add map CommandHandler
 
             services.AddControllers();
         }

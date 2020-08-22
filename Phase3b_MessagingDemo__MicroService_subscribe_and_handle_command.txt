@@ -1,5 +1,10 @@
 //lecture 11
 
+open questions:
+1. why does the hanlder needs to retrun Task  ?
+    it is async void.
+    why do we need to make it async 
+
 goal:
 	so far, the gateway accepted a command and publsihed  it to the service bus.
 	now, the TestMessaging micro service will subscribe to that message  bus for that command 
@@ -148,61 +153,106 @@ step4 - Sttings
 
 
 =======================================================================================================
-step5 - Subscribing and handling command 
-        subscriber (eg, MS.TsetMessaging.ApiApp) define the command handler 
-        subscriber                              subscrbe to the bus to handle the commad
-        
+step5 - Define Command handler in the micro service 
 =======================================================================================================
 
-5.1 define the command Handler
-    the subscriber of the command handler (X.TestMessaging.Api.App)
-    wil define the Handler 
+goal: define the command Handler in the micro service
+        right not it just writes to log
+
+    in X.TestMessaging.Api.App
+    
+
+     public class TestMessagingCommandHandler : ICommandHandler<TestMessagingCommand>
+    {
+        #region ICommandHandler
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        public async Task HandleAsync(TestMessagingCommand command)
+        {
+            //step1:  dummay (to support async)
+            await Task.CompletedTask; //dummay
+
+            Console.WriteLine($"In TestMessagingCommadHandler. Dummy={command.Dummay}");
+
+            return;
+        }
+
+        #endregion 
+    }
 
 
 
 
-    B.  define in the API GW: handler 
-         public class ActivityCreatedHandler : IEventHandler<ActivityCreated>
-         {
-            public async Task HandleAsync(ActivityCreated @event)
-            {
-               //stupod
-               awit Task.completedTask;z
-                Console.WriteLine($"Activity created: {@event.Name}");
-                //later on we migt add to repositry
-            }
-
-         }
-
-        C.  init IOC : map the event to the event handler 
-            in the GateWay, Startup.cs method public void ConfigureServices(IServiceCollection services)
-            calls
-                            services.AddScoped<IEventHandler<ActivityCreatedEvent>, ActivityCreatedHandler>();
+=======================================================================================================
+step8 - subscribe to gen notiications from the bus when the command i sent
+=======================================================================================================
+        the Subsciber (eg, the mocroservice MS.TestMessaging.ApiApp) subscribes to the bus to get notifications 
+        when the command is fired.
 
 
+          in the micro service that  subscribes to the command (X.TestMessaging.Api.App)
+            file:  Program.cs 
+  
+        #region original Net Core 
+        /*
+        
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
 
-        C.  subscribe to the bus  
-            when the bus gets ActivityCreatedd event
-            it will fire the activityCreaedEventHandler
+         public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+        */
 
-            eg, in APIGW project, Programm.cs
-            public static void Main(string[] args)
-            {
-                ServiceHost //fro common
-                .Create<Startup>(args)
-                .UseRabbitMq()  //our fluent api
-                .SubscribeToEvent<ActivityCreatedEbent>()   //find the event handler an subscribe  
-                .Build()
-                .Run();
-            }
-
-
-
-            SubscribeToEvent - 
-                    use IOC to find the envetn handler
-                    then it tells the bus to nanlge the event usingthat handler
+        #endregion
 
      
+        public static void Main(string[] args)
+        {
+            ServiceHost
+                .Create<Startup>(args)                          //returns service host
+                .UseRabbitMq()                                  //return bus builder
+                .SubscribeToCommand<TestMessagingCommand>()     //use ioc to create instance of the handler and tell the bus to handle the coommands with that hadker
+                .Build()
+                .Run();
+        }
+
+
+
+
+
+
+
+
+=======================================================================================================
+step7 - init IOC with CommandHandler  
+=======================================================================================================
+
+        in the micro service that  subscribes to the command (X.TestMessaging.Api.App)
+        file:       Startup.cs 
+        method:     public void ConfigureServices(IServiceCollection services)
+        call:   
+
+            services.AddScoped<ICommandHandler<TestMessagingCommand>, TestMessagingCommandHandler>(); 
+
+            meaning, to resolve ICommandHandler<TestMessagingCommand>
+            it will retrun instance of TestMessagingCommandHandler
+
+
+
+
+
+
+
 
 
 

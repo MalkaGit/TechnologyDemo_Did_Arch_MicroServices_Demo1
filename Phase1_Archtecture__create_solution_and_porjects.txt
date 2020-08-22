@@ -1,3 +1,5 @@
+https://documentation.peelmicro.info/backend/dotnetcore-net-core-microservice.html#_1-system-arquitecture
+https://www.c-sharpcorner.com/article/publishing-rabbitmq-message-in-asp-net-core/
 Create solution:
 
 1.	add project X.Common

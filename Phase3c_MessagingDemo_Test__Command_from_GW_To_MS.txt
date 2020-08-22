@@ -1,0 +1,11 @@
+//11-minue 10
+1. make sure rabbit mq is up and running
+	(if it is on docker or on localc machine)
+
+2. start the GW project
+3. star the micor service that handles the command	(TestMessaging.ApiApp)
+4. send POST from postman to api gw
+	content type: application\json
+
+==postman sohuld get 202 accepted
+==see in the logs that the log from the command handler was written

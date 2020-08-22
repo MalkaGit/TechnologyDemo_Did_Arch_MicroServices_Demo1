@@ -1,5 +1,42 @@
 ===============================================
-option1:	run rabbit mq on cloud	-	chosen
+option2:	run RabbiMQ on local mmachine 
+===============================================
+				note: you will need to install Erlang	
+				how ?
+					https://www.rabbitmq.com/						=>	
+					download + installation							=> 
+					https://www.rabbitmq.com/install-windows.html	=> 
+					using the installer 
+
+
+step1: instal Erolang 64 bit					https://erlang.org/download/otp_versions_tree.html
+												otp_win32_23.0
+step2:	download and intstall  rabbbitmq-server	https://www.rabbitmq.com/install-windows.html#installer
+		it installed windows service rabbitmmq
+
+
+
+option3:	run RabbitMQ using docker on local mmachine
+==========================================================
+
+problem: wnidows version
+
+A. read: how to install docker on macchine
+	https://runnable.com/docker/install-docker-on-windows-10
+	tried installing docker but got error - docker not available on home editions. please use doker toolbox.
+B.  download and install docker desktop
+	https://www.docker.com/products/docker-desktop
+
+			docker run -p 5672:5672 rabbitmq		
+
+
+
+
+
+
+
+===============================================
+option1:	run rabbit mq on cloud	-	no working
 ===============================================
 			A.see plan:	https://www.cloudamqp.com/	==> pricing => you will see they have plan for free 
 			B.sign up:	create account				regine.issan@gmail.com	Pumikki14!
@@ -16,21 +53,3 @@ option1:	run rabbit mq on cloud	-	chosen
 				server name
 				user
 				password 
-
-===============================================
-option2:	run RabbiMQ on local mmachine 
-===============================================
-				note: you will need to install Erlang	
-				how ?
-					https://www.rabbitmq.com/						=>	
-					download + installation							=> 
-					https://www.rabbitmq.com/install-windows.html	=> 
-					using the installer 
-
-===============================================				
-option3:	run RabbitMQ using docker on local mmachine
-===============================================
-			docker run -p 5672:5672 rabbitmq		
-
-
-

@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 		Phase3_MessageBusDemo.txt = Phase3_MessageBusDemo.txt
 		Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt = Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt
 		Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt = Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt
+		Phase3c_MessagingDemo_Test__Command_from_GW_To_MS.txt = Phase3c_MessagingDemo_Test__Command_from_GW_To_MS.txt
 		Phase9.txt = Phase9.txt
 	EndProjectSection
 EndProject

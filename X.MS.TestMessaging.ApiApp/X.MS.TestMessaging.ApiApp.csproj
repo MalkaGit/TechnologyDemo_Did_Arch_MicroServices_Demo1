@@ -12,9 +12,5 @@
     <ProjectReference Include="..\X.Common\X.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CommandHandlers\" />
-  </ItemGroup>
-
 
 </Project>

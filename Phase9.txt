@@ -1,50 +1,33 @@
+the command handler fires event 
+=================================
+0. it has data meember of bus 
+        private readonly IBusClient _busClient;
+
+1. it gest the bus in constructor 
+
+ public CreateActivityHandler(IBusClient busClient,
+           ...)
+        {
+            ...
+            _busClient = busClient;
+           ..
+        }
 
 
-==============================================================================================
-GW register and handle the success event: eg, Activity created
-=================================================================================================
+2. the handlnig method 
 
-==>GateWay will handle success event
-    A.  define in common the event: ActivityCreatedEvent 
-    B.  define in the API GW: handler 
-         public class ActivityCreatedHandler : IEventHandler<ActivityCreated>
-         {
-            public async Task HandleAsync(ActivityCreated @event)
+
+  public async Task HandleAsync(CreateActivity command)
+        {
+            //_logger.LogInformation($"Creating activity: '{command.Id}' for user: '{command.UserId}'.");
+            try 
             {
-               //stupod
-               awit Task.completedTask;z
-                Console.WriteLine($"Activity created: {@event.Name}");
-                //later on we migt add to repositry
+                ..
+                await _busClient.PublishAsync(new ActivityCreated
+                    (command.Id,command.UserId, command.Category, command.Name, command.Description, command.CreatedAt)
+                );
+
+                return;
             }
-
-         }
-
-        C.  init IOC : map the event to the event handler 
-            in the GateWay, Startup.cs method public void ConfigureServices(IServiceCollection services)
-            calls
-                            services.AddScoped<IEventHandler<ActivityCreatedEvent>, ActivityCreatedHandler>();
-
-
-
-        C.  subscribe to the bus  
-            when the bus gets ActivityCreatedd event
-            it will fire the activityCreaedEventHandler
-
-            eg, in APIGW project, Programm.cs
-            public static void Main(string[] args)
-            {
-                ServiceHost //fro common
-                .Create<Startup>(args)
-                .UseRabbitMq()  //our fluent api
-                .SubscribeToEvent<ActivityCreatedEbent>()   //find the event handler an subscribe  
-                .Build()
-                .Run();
-            }
-
-
-
-            SubscribeToEvent - 
-                    use IOC to find the envetn handler
-                    then it tells the bus to nanlge the event usingthat handler
-
-     
+           
+        }
