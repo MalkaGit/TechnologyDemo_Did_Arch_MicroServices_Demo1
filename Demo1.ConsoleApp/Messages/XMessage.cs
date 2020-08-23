@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GettingStarted.ConsoleApp.Messages
+namespace Demo1.ConsoleApp.Messages
 {
     public class XMessage
     {

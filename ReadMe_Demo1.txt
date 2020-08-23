@@ -1,3 +1,6 @@
+0.goal
+	console application 
+	Pub sub to RabbitMq using RawRabbit 
 1. reference
 	https://rawrabbit.readthedocs.io/en/master/Getting-started.html
 

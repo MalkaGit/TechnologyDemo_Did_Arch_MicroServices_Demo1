@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using GettingStarted.ConsoleApp.Messages;
+using Demo1.ConsoleApp.Messages;
 
-namespace GettingStarted.ConsoleApp
+namespace Demo1.ConsoleApp
 {
     class Program
     {
@@ -63,6 +63,5 @@ namespace GettingStarted.ConsoleApp
 
         }
 
-     
     }
 }
