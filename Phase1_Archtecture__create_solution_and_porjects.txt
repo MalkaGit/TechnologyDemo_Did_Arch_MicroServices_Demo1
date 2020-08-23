@@ -1,5 +1,19 @@
+dot net core:
+
+ms arch:
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment
+
+publish with rabbit mq:
+
+course - bad:
 https://documentation.peelmicro.info/backend/dotnetcore-net-core-microservice.html#_1-system-arquitecture
 https://www.c-sharpcorner.com/article/publishing-rabbitmq-message-in-asp-net-core/
+
+
+mongo db:
+
+auth jwt:
+
 Create solution:
 
 1.	add project X.Common

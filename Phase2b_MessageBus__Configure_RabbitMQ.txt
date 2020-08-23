@@ -1,5 +1,5 @@
 ===============================================
-option2:	run RabbiMQ on local mmachine 
+option1:	run RabbiMQ on local mmachine 
 ===============================================
 				note: you will need to install Erlang	
 				how ?
@@ -14,12 +14,16 @@ step1: instal Erolang 64 bit					https://erlang.org/download/otp_versions_tree.h
 step2:	download and intstall  rabbbitmq-server	https://www.rabbitmq.com/install-windows.html#installer
 		it installed windows service rabbitmmq
 
+note:	cli tool to manage it
+		in C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.7\sbin\rabbitmqctl.bat
 
 
-option3:	run RabbitMQ using docker on local mmachine
+==========================================================
+option2:	run RabbitMQ using docker on local mmachine
+docker not working on my machone
 ==========================================================
 
-problem: wnidows version
+
 
 A. read: how to install docker on macchine
 	https://runnable.com/docker/install-docker-on-windows-10
@@ -36,7 +40,7 @@ B.  download and install docker desktop
 
 
 ===============================================
-option1:	run rabbit mq on cloud	-	no working
+option1:	run rabbit mq on cloud	-	no working - failed to connect
 ===============================================
 			A.see plan:	https://www.cloudamqp.com/	==> pricing => you will see they have plan for free 
 			B.sign up:	create account				regine.issan@gmail.com	Pumikki14!

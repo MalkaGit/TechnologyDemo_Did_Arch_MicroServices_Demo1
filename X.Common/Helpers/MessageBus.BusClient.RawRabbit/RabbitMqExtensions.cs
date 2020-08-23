@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RawRabbit;
-using RawRabbit.Instantiation;
-using RawRabbit.Pipe;
+//using RawRabbit.Instantiation;
+//using RawRabbit.Pipe;
 using X.Common.Messages.Common.Commands;
 using X.Common.Messages.Common.Events;
 

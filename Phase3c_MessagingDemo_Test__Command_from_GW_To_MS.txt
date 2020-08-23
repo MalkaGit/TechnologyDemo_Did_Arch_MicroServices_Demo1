@@ -1,8 +1,16 @@
 //11-minue 10
 1. make sure rabbit mq is up and running
-	(if it is on docker or on localc machine)
+	(if it is on docker or windows service)
 
 2. start the GW project
+   make sure it starts 
+
+	try to use postman:
+	POST			http://localhost:54070/TestMessaging
+	contrnt type:	json
+	body:			{	"Dummay": "123"	}
+
+
 3. star the micor service that handles the command	(TestMessaging.ApiApp)
 4. send POST from postman to api gw
 	content type: application\json
