@@ -31,14 +31,21 @@
 
 2.1 RabbitMQ				
 
-	most popular, relaiable 
-	https://www.rabbitmq.com/ 
+	A.					https://www.rabbitmq.com/ 
+	B.	Client			option1:	RawRabbit with .netcodre
+									https://rawrabbit.readthedocs.io/en/master/Getting-started.html
+
+						option2:	RabbirMQ client C# .netCore
+	
 	read:	
 		https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html
 		https://www.cloudamqp.com/docs/monitoring.html	
 		https://www.rabbitmq.com/tutorials/amqp-concepts.html
 		https://www.cloudamqp.com/docs/index.html
 		https://www.cloudamqp.com/blog/2015-09-03-part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html	
+
+
+
 								
 2.2	Azure service bus		
 	https://azure.microsoft.com/en-us/services/service-bus/?&ef_id=CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&OCID=AID2100061_SEM_CjwKCAjwm_P5BRAhEiwAwRzSO1cHsyRK17h-ePrq6_lDYrUFdDSHGiUjBgSVBijCr4awc-l0Qm0-OxoC-_UQAvD_BwE:G:s&dclid=CLXQ4Pqdp-sCFbPFuwgdhGQBrQ
