@@ -1,5 +1,5 @@
 0.goal 
-	Pub sub to RabbitMq using RawRabbit 
+	Pub sub to RabbitMq using RawRabbit as RabbitMq client library 
 1. reference
 	https://rawrabbit.readthedocs.io/en/master/Getting-started.html
 
@@ -7,22 +7,10 @@
 2.1 add muget packages:	RawRabbit, RawRabbit.vNext 
 2.2	Create XMessage.cs
 2.3 Create Program
-2.4 Debug
+
+3. Test
+3.1 Debug
 
 
 
 
-
-2.1 
-	create Demo1a.Xommon
-	with message
-
-	create Demo1a.Sub.Api.App
-	add muget packages:	RawRabbit, RawRabbit.vNext 
-
-	create Demo1a.Pub.Api.App
-	add muget packages:	RawRabbit, RawRabbit.vNext 
-
-	
-2.2 create XMessage
-2.3 create Program

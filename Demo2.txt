@@ -1,0 +1,59 @@
+0.goal 
+	Pub sub to RabbitMq using RawRabbit as RabbitMq client library 
+	Publisher is webapp1
+	Subscriber is web app2
+
+1. reference
+	https://rawrabbit.readthedocs.io/en/master/Getting-started.html
+
+
+2.	Steps
+2.1	create Project	Demo2.Common of type class library
+
+2.2 create Demo2.Sub.ApiApp
+	
+	add => new project => Asp.Net Core Web Application => API
+	uncheck:	Configure for https
+	uncheck:	Enable Docket
+	No authentication
+
+	add muget packages:	RawRabbit, RawRabbit.vNext 
+
+
+2.3 create Demo2.Pub.ApiApp
+	
+	add => new project => Asp.Net Core Web Application => API
+	uncheck:	Configure for https
+	uncheck:	Enable Docket
+	No authentication
+
+	add muget packages:	RawRabbit, RawRabbit.vNext 
+
+
+	C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.7\sbin>rabbitmqctl list_queues
+
+
+
+
+
+
+
+
+
+2.4	add XMessage to the common
+
+	
+	
+	
+	with message
+
+	
+	
+
+	
+2.2 create XMessage
+2.3 create Program
+
+
+3. Test
+3.1 Debug

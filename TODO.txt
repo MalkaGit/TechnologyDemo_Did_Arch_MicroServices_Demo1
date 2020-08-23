@@ -1,1 +1,16 @@
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-3.1
+1.	the start up class 
+	https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-3.1		
+	https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=windows
+
+1.1	Dependency injection 
+	see: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1
+			services.AddSingletone	
+			services.AddScoped
+	reolving: https://stackoverflow.com/questions/32459670/resolving-instances-with-asp-net-core-di-from-within-configureservices
+
+	https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-3.1	
+	https://stackoverflow.com/questions/51421866/what-are-the-differences-between-configureservices-and-configure-in-asp-net#:~:text=In%20a%20nutshell%3A,Configure(Configuration.
+
+	register a service in	StartUp::ConfigureServices
+	consume service using depeandency injection or ApplicationServices
+
