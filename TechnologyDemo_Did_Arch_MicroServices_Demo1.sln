@@ -46,18 +46,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo1", "Demo1", "{71086DB8
 		Demo1.txt = Demo1.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo1.ConsoleApp", "Demo1.ConsoleApp\Demo1.ConsoleApp.csproj", "{DCD65AEC-0615-47A2-85AC-80AB9E6F9AAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo1.ConsoleApp", "Demo1.ConsoleApp\Demo1.ConsoleApp.csproj", "{DCD65AEC-0615-47A2-85AC-80AB9E6F9AAF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo2", "Demo2", "{6F48F491-390D-483F-B4A3-5017241D31AC}"
 	ProjectSection(SolutionItems) = preProject
 		Demo2.txt = Demo2.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2.Common", "Demo2.Common\Demo2.Common.csproj", "{F6FE615B-082C-4EBD-85D0-250153EB02F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo2.Common", "Demo2.Common\Demo2.Common.csproj", "{F6FE615B-082C-4EBD-85D0-250153EB02F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2.Sub.ApiApp", "Demo2.Sub.ApiApp\Demo2.Sub.ApiApp.csproj", "{DA6D891F-0BB2-4FB4-9E90-7D190858E5C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo2.Sub.ApiApp", "Demo2.Sub.ApiApp\Demo2.Sub.ApiApp.csproj", "{DA6D891F-0BB2-4FB4-9E90-7D190858E5C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2.Pub.ApiApp", "Demo2.Pub.ApiApp\Demo2.Pub.ApiApp.csproj", "{470FB713-24E4-4D29-84B6-3102A23B1587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo2.Pub.ApiApp", "Demo2.Pub.ApiApp\Demo2.Pub.ApiApp.csproj", "{470FB713-24E4-4D29-84B6-3102A23B1587}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alternatives", "Alternatives", "{AA7FC12B-154B-4007-9230-9876557E83B5}"
+	ProjectSection(SolutionItems) = preProject
+		MessageBusAlternatives.txt = MessageBusAlternatives.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMq.Setup", "Research.MessageQueue.RabbitMq.Setup\Research.MessageQueue.RabbitMq.Setup.csproj", "{67269098-8A80-4043-A472-055BC8513845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +108,10 @@ Global
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67269098-8A80-4043-A472-055BC8513845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67269098-8A80-4043-A472-055BC8513845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67269098-8A80-4043-A472-055BC8513845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67269098-8A80-4043-A472-055BC8513845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +126,7 @@ Global
 		{F6FE615B-082C-4EBD-85D0-250153EB02F4} = {6F48F491-390D-483F-B4A3-5017241D31AC}
 		{DA6D891F-0BB2-4FB4-9E90-7D190858E5C4} = {6F48F491-390D-483F-B4A3-5017241D31AC}
 		{470FB713-24E4-4D29-84B6-3102A23B1587} = {6F48F491-390D-483F-B4A3-5017241D31AC}
+		{AA7FC12B-154B-4007-9230-9876557E83B5} = {4688FFF0-4D85-45BD-8146-1C0732F1DF6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {996DDED7-77C7-4B4F-80F0-B2E65B832A29}

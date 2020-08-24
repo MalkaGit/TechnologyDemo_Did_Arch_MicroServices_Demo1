@@ -1,6 +1,7 @@
 dot net core:
 
 ms arch:
+https://www.youtube.com/watch?v=1xo-0gCVhTU
 https://docs.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment
 
 publish with rabbit mq:

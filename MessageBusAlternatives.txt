@@ -1,0 +1,4 @@
+
+https://stackshare.io/rabbitmq/alternatives
+https://dzone.com/articles/microservice-architecture-best-practices-messaging
+https://www.cloudamqp.com/blog/2020-04-10-microservices-message-queue-video.html

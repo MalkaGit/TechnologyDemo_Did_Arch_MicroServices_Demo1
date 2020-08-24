@@ -34,7 +34,7 @@ namespace Demo2.Sub.ApiApp
            {
                using (FileStream fs = File.Create(@"c:\todel\" +DateTime.UtcNow.Ticks.ToString() ))
                {
-                   byte[] info = new UTF8Encoding(true).GetBytes("got message");
+                   byte[] info = new UTF8Encoding(true).GetBytes("var1=" + msg.param1 + " var2="+ msg.param2);
                     // Add some information to the file.
                     fs.Write(info, 0, info.Length);
                }
