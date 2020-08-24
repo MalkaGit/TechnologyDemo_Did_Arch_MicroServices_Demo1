@@ -64,7 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alternatives", "Alternative
 		MessageBusAlternatives.txt = MessageBusAlternatives.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMq.Setup", "Research.MessageQueue.RabbitMq.Setup\Research.MessageQueue.RabbitMq.Setup.csproj", "{67269098-8A80-4043-A472-055BC8513845}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMQ.Setup.1LocalMachine", "Research.MessageQueue.RabbitMQ.Setup.1LocalMachine\Research.MessageQueue.RabbitMQ.Setup.1LocalMachine.csproj", "{BCC0AFA3-BD5E-4F3C-9BDF-F5FAF8D8B208}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,10 +108,10 @@ Global
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{470FB713-24E4-4D29-84B6-3102A23B1587}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67269098-8A80-4043-A472-055BC8513845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67269098-8A80-4043-A472-055BC8513845}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67269098-8A80-4043-A472-055BC8513845}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67269098-8A80-4043-A472-055BC8513845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC0AFA3-BD5E-4F3C-9BDF-F5FAF8D8B208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC0AFA3-BD5E-4F3C-9BDF-F5FAF8D8B208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC0AFA3-BD5E-4F3C-9BDF-F5FAF8D8B208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC0AFA3-BD5E-4F3C-9BDF-F5FAF8D8B208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
