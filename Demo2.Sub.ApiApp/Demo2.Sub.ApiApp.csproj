@@ -10,9 +10,5 @@
     <PackageReference Include="RawRabbit.vNext" Version="1.10.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Demo2.Common\Demo2.Common.csproj" />
-  </ItemGroup>
-
 
 </Project>

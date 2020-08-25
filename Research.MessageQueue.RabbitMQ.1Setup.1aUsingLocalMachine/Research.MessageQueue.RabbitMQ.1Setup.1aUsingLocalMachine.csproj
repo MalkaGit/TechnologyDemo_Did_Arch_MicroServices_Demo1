@@ -6,4 +6,9 @@
     <RootNamespace>Research.MessageQueue.RabbitMQ._1Setup._1aUsingLocalMachine</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="RawRabbit" Version="1.10.4" />
+    <PackageReference Include="RawRabbit.vNext" Version="1.10.4" />
+  </ItemGroup>
+
 </Project>
