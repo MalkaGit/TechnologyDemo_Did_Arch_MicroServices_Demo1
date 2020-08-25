@@ -30,13 +30,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.TestMessaging.ApiApp", "X.MS.TestMessaging.ApiApp\X.MS.TestMessaging.ApiApp.csproj", "{D18011BF-C705-4AC5-B455-012E2D6B4892}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Research", "Research", "{47C42CF2-E4A9-48A1-B0CB-66FCBDCAC9A8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1DotNetCore", "1DotNetCore", "{C2EAFEF6-CAC4-46B7-ADF3-7C8526287EDF}"
-	ProjectSection(SolutionItems) = preProject
-		TODO.txt = TODO.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine", "Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine\Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine.csproj", "{72C78C62-1D0E-4DB5-8C41-CD320DACA222}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp", "Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp\Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp.csproj", "{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}"
@@ -78,9 +71,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C2EAFEF6-CAC4-46B7-ADF3-7C8526287EDF} = {47C42CF2-E4A9-48A1-B0CB-66FCBDCAC9A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {996DDED7-77C7-4B4F-80F0-B2E65B832A29}
