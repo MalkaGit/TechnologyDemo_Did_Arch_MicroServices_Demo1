@@ -11,28 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.Identity.ApiApp", "X.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.Common", "X.Common\X.Common.csproj", "{13E95DDC-55E2-4EBE-AE45-2D3F15E86602}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{6D5424E0-6CE5-41E1-BB9A-605FE9BE9BDA}"
-	ProjectSection(SolutionItems) = preProject
-		Phase1_Archtecture__create_solution_and_porjects.txt = Phase1_Archtecture__create_solution_and_porjects.txt
-		Phase2_MessageBus.txt = Phase2_MessageBus.txt
-		Phase2a_MessageBus__Choose_technoloy.txt = Phase2a_MessageBus__Choose_technoloy.txt
-		Phase2b_MessageBus__Configure_RabbitMQ.txt = Phase2b_MessageBus__Configure_RabbitMQ.txt
-		Phase2c_MessageBus_Define_Commands.txt = Phase2c_MessageBus_Define_Commands.txt
-		Phase2d_MessageBus_Define_Events.txt = Phase2d_MessageBus_Define_Events.txt
-		Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt = Phase2e_MessageBus_REDO__Helper_methods_using_RawRabbit.IBusClient.txt
-		Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt = Phase2f_MessageBus_REDO_Helper_methods_serviceHost_as_BusClient.txt
-		Phase3_MessageBusDemo.txt = Phase3_MessageBusDemo.txt
-		Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt = Phase3a_MessageBusDemo__API_GW_POST___publish_the_command_to_The_bus.txt
-		Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt = Phase3b_MessagingDemo__MicroService_subscribe_and_handle_command.txt
-		Phase3c_MessagingDemo_Test__Command_from_GW_To_MS.txt = Phase3c_MessagingDemo_Test__Command_from_GW_To_MS.txt
-		Phase9.txt = Phase9.txt
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "X.MS.TestMessaging.ApiApp", "X.MS.TestMessaging.ApiApp\X.MS.TestMessaging.ApiApp.csproj", "{D18011BF-C705-4AC5-B455-012E2D6B4892}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine", "Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine\Research.MessageQueue.RabbitMQ.1Setup.1aUsingLocalMachine.csproj", "{72C78C62-1D0E-4DB5-8C41-CD320DACA222}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp", "Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp\Research.MessageQueue.RabbitMQ.2Pub_Sub.2a_using_RabbitMQ.ConsoleApp.csproj", "{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,14 +39,6 @@ Global
 		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D18011BF-C705-4AC5-B455-012E2D6B4892}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72C78C62-1D0E-4DB5-8C41-CD320DACA222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72C78C62-1D0E-4DB5-8C41-CD320DACA222}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72C78C62-1D0E-4DB5-8C41-CD320DACA222}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72C78C62-1D0E-4DB5-8C41-CD320DACA222}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75A55E35-86EC-4D2F-8F37-FA6A3EBE4640}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
